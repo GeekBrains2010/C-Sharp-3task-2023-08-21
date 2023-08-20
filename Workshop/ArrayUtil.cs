@@ -10,11 +10,15 @@ namespace Workshop
     {
         public static int SecondMax(int[] array)
         {
-            /* Здесь надо написать алгоритм поиска второго максимума, пример: 
-             * массив: [2, 4, 5, 3], результат: 4
-             * массив: [2, 6, 5, 3], результат: 5
-             */
-            return 0;
+            int max = 0;
+            for(int i = 0; i < array.Length; i++)
+            {
+                if (max < array[i])
+                {
+                    max = array[i];
+                }
+            }
+            return max;
         }
     }
 }
