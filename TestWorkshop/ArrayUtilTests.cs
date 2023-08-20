@@ -61,5 +61,13 @@ namespace TestWorkshop
             int actual = ArrayUtil.SecondMax(arr);
             Assert.AreEqual(7, actual);
         }
+
+        [TestMethod]
+        public void TestSecondMax_NegativeNumbers()
+        {
+            int[] arr = new int[] { -1, -3, -2, -1 };
+            int actual = ArrayUtil.SecondMax(arr);
+            Assert.AreEqual(-2, actual);
+        }
     }
 }
