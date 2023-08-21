@@ -1,8 +1,11 @@
 name: Continuous Integration
 
-on: [push]
-    
-
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+ 
 env:
   DOTNET_VERSION: '6.0.x'
   AZURE_WEBAPP_NAME: rainers-first-webapp
