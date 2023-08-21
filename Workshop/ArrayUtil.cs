@@ -14,20 +14,18 @@ namespace Workshop
              * массив: [2, 4, 5, 3], результат: 4
              * массив: [2, 6, 5, 3], результат: 5
              */
-            int firstMax = 0;
-            int secondMax = 0;
-            for (int i = 0; i < array.Length; i++)
+            int firstMax = array[0];
+            int secondMax = int.MinValue;
+            for (int i = 1; i < array.Length; i++)
             {
-                if (firstMax < array[i]) firstMax = array[i];
-                if (secondMax > array[i] && secondMax < firstMax) secondMax = array[i];
-
+                if (firstMax < array[i])
+                {
+                    firstMax = array[i];
+                    secondMax = array[i - 1];
+                }
+                else if (array[i] != firstMax && array[i] > secondMax) secondMax = array[i];
             }
-            return firstMax;
-        }
-        public static void Main(String[] arggs)
-        {
-            int[] array = { 2, 4, 5, 11, 7 };
-            Console.WriteLine(SecondMax(array));
+            return secondMax;
         }
     }
 }
