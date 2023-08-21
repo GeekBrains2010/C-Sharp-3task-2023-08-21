@@ -14,7 +14,15 @@ namespace Workshop
              * массив: [2, 4, 5, 3], результат: 4
              * массив: [2, 6, 5, 3], результат: 5
              */
-            return 0;
+            int max = array[0];
+            foreach(int item in array)
+            {
+                if (max < item)
+                {
+                    max = item;
+                }
+            }
+            return max;
         }
     }
 }
