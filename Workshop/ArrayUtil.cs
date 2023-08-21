@@ -22,7 +22,19 @@ namespace Workshop
                     max = item;
                 }
             }
-            return max;
+            int secondMax = int.MinValue;
+            for(int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == max)
+                {
+                    continue;
+                }
+                if (array[i] > secondMax)
+                {
+                    secondMax = array[i];
+                }
+            }
+            return secondMax;
         }
     }
 }
