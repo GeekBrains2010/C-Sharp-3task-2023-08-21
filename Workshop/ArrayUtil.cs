@@ -14,7 +14,23 @@ namespace Workshop
              * массив: [2, 4, 5, 3], результат: 4
              * массив: [2, 6, 5, 3], результат: 5
              */
-            return 0;
+            int max1 = array[0];
+            int max2 = array[0];
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] > max1)
+                {
+                    max1 = array[i];
+                }
+            }
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] > max2 && array[i] != max1)
+                {
+                    max2 = array[i];
+                }
+            }
+            return max2;
         }
     }
 }
